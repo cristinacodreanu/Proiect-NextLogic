@@ -1,0 +1,43 @@
+<script src="js/contact.js"></script>
+    
+   
+<nav class="topnav ">
+    <a class="active" href="/">ACASĂ</a>
+    <a href="about">ABOUT US</a>
+    <a href="contact">CONTACT</a>
+</nav>
+
+    <form  action="contact-submit" method="POST" >
+    <div class="inner-form">
+        <div class="input-form">
+        <p>
+            <label for="nume">Nume</label>
+            <input type="text" id="nume" name="nume" onfocusout="onfocusoutInput(this)" >
+            <label class="error nume" id="invisible" >Câmp obigatoriu</label>
+        </p>
+
+        <p>
+            <label for="prenume">Prenume</label>
+            <input type="text" id="prenume" name="prenume" onfocusout="onfocusoutInput(this)">
+            <label class="error prenume" id="invisible">Câmp obigatoriu</label>
+        </p>
+        <p>
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" onfocusout="onfocusoutInput(this)">
+            <label class="error email" id="invisible">Câmp obigatoriu</label>
+        </p>
+        <p>
+            <label for="telefon">Telefon</label>
+            <input type="text" id="telefon" name="telefon" onfocusout="onfocusoutInput(this)">
+            <label class="error telefon" id="invisible">Câmp obigatoriu</label>
+        </p>
+        </div>
+        <textarea placeholder="Lasa un mesaj" rows="5" cols="5"></textarea>
+    </div> 
+    <div class="button">      
+    <button type="submit" id="contact-button">Trimite</button>
+    </div> 
+    <span id="error-span"></span>
+    </form>
+    
+    <br><br><br><br><br><br><br><br><br><br><br>

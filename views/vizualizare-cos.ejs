@@ -1,0 +1,41 @@
+<% if(logat ){%>
+    <nav class="topnav ">
+        <a class="active " href="/">ACASĂ</a>
+        <a href="/2 ">TABELA ABSENTE</a>
+        <div class="topnav-right ">
+            <% if(tipUtilizator=="admin"){%>
+                <a>Logat ca si, <span style="color:red" ><%=tipUtilizator%></span></a>
+                
+                <%}else{%>
+                    <a>Logat ca si, <span style="color:red" ><%=logat%></span></a>
+                    <%}%>
+                        <a href="autentificare ">DELOGARE</a>
+
+        </div>
+    </nav>
+    <%}else{%>
+        <nav class="topnav ">
+            <a class="active " href="/">ACASĂ</a>
+            <a href="/2">TABELA ABSENTE</a>
+            <div class="topnav-right ">
+                <a href="autentificare">AUTENTIFICARE</a>
+            </div>
+        </nav>
+        <%}%>
+            <fieldset id="rezChest" style="margin-right: 80px;padding: 60px;">
+                <legend>Vizualizare absentele motivate:</legend>
+                <p id="rasCorect" style="margin-bottom: 50px;">
+                    Profesor:
+                </p>
+                <p id="rasCorect" style="margin-bottom: 50px;">
+                    <%=detaliiUtilizator%>
+                </p>
+                </br>
+                </br>
+                <h2 style="margin-left: 270px; margin-bottom:30px; font-size:xx-large">Absente motivate:</h2>
+
+                <pre style="margin-left: 50px; font-weight:bold;font-size:30px;">
+                    <%=cos%>
+                </pre>
+
+            </fieldset>

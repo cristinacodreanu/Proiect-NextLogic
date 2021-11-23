@@ -1,0 +1,42 @@
+<% if(logat ){%>
+    <nav class="topnav ">
+        <a class="active " href="index">ACASĂ</a>
+      
+        <div class="topnav-right ">
+            <a>Logat ca si, <span style="color:red" ><%=sesiune%></span></a>
+            <a href="autentificare ">DELOGARE</a>
+
+        </div>
+    </nav>
+    <%}else{%>
+        <nav class="topnav ">
+            <a class="active " href="/">ACASĂ</a>
+           
+            <div class="topnav-right ">
+            </div>
+        </nav>
+        <%}%>
+
+            <% if(sesiune !=''){%>
+                <p id="mesajEroare">
+                    <span style="color:red"> <%=sesiune %></span>
+                </p>
+
+                <%}%>
+
+                    <div id="logare" class="log">
+
+                        <form id="autentification" action="/verificare-autentificare" method="post">
+                            <fieldset id="AUT">
+                                <legend>AUTENTIFICARE</legend>
+                                <label id="user">Utilizator: </label>
+                                <input type="text" id="user" name="utilizator" size="25" maxlength="25" class="text" /></br>
+
+                                <label id="pass">Parola:   </label>
+                                <input type="password" id="parola" name="parola" size="25" maxlength="45" class="text" /></br>
+                                </br>
+                                <button type="submit" size="25">AUTENTIFICARE</button>
+                                </br>
+                            </fieldset>
+                        </form>
+                    </div>

@@ -1,0 +1,120 @@
+
+<% logat=0 %>
+    <% ok=0 %>
+        <% nr=0 %>
+            <%for(let i=0;i<users.length;++i){%>
+
+                <% if(sesiune==users[i].utilizator){%>
+                    <% logat=1%>
+                        <% nr=i %>
+                            <% if(users[i].tip=="admin"){%>
+                                <% ok=1 %>
+                                   <%} %>
+                                        <%} %>
+                                            <%} %>
+                                                    <% if(logat==1){%>
+                                                        <nav class="topnav ">
+                                                            <a class="active" href="/">ACASĂ</a>
+                                                            <a href="/2">TABELA ABSENTE</a>
+                                                            
+                                                            <div class="topnav-right ">
+                                                                <% if(ok==1){%>
+                                                                    <a>Logat ca si, <span style="color:red" ><%=users[nr].tip%></span></a>
+
+                                                                    <%}else{%>
+                                                                        <a>Logat ca si, <span style="color:red" ><%=sesiune%></span></a>
+                                                                        <%} %>
+                                                                            <% if(ok==1){%>
+                                                                                <a href="admin">ADAUGA NOTA</a>
+                                                                                
+                                                                                <%} %>
+                                                                                    <a href="autentificare ">DELOGARE</a>
+                                                            </div>
+                                                        </nav>
+
+                                                        <div id="mesajUtilizator1">
+                                                            <p> Bine ai venit,
+                                                                <span style="color:red"><%=sesiune%></span> !</p>
+                                                        </div>
+
+                                                        <div>
+                                                            <h2 style=" margin-top:20px;margin-left: 300px; margin-bottom:30px; font-size:xx-large">Note:</h2>
+                                                            
+                                                                                                                                    
+<table border="1">
+    <tr>
+        <th>Id</th>
+        <th>Nume</th>
+        <th>Materie</th>
+        <th>Nota</th>
+        <th>Data</th>
+       
+    </tr>
+    
+    <%  if(elevi.length){ 
+       
+        var i=1;
+       elevi.forEach(function(elevi){ %>
+        <tr>
+            <td><%=i; %></td>
+            <td><%=elevi.nume_elev%></td>
+            <td><%=elevi.materia%></td>
+            <td><%=elevi.nota%></td>
+            <td><%=elevi.data%></td> 
+        </tr>
+        
+        <%   i++; }) %>
+    
+    <% } else{ %>
+        <tr>
+            <td colspan="5">No Data Found</td>
+        </tr>
+    <%  } %>
+
+</table>                                                               
+                                                        </div>
+                                            
+                                                            <%}else{%>
+                                                                <nav class="topnav ">
+                                                                    <a class="active " href="/">ACASĂ</a>
+                                                                    <a href="about">ABOUT US</a>
+                                                                    <a href="contact">CONTACT</a>
+                                                                    
+
+                                                                    <div class="topnav-right ">
+
+                                                                        <a href="autentificare ">AUTENTIFICARE</a>
+
+                                                                    </div>
+                                                                </nav>
+
+                                                                <div id="mesajUtilizator" style="margin-left:300px">
+                                                                    <div id="BD">
+                                                                        <form id="creare-bd" action="/creare-bd" method="get" style=" margin-left: 680px;">
+                                                                            <button id="creareBD" type="submit" size="25">Creare BD</button>
+
+                                                                        </form>
+
+                                                                        <form id="inserare-bd" action="/inserare-bd" method="get" style=" margin-left: 680px;">
+                                                                            <button id="incarcareBD" type="submit" size="25">Încarcare BD</button>
+                                                                        </form>
+                                                                        
+                                                                       
+                                                                    </div>
+
+                                                                    
+
+                                                                    <p style="font-size: 40px; color:#ae0c0c;margin-top:20px;margin-bottom:50px; margin-left:230px">Bine ai venit!</p>
+
+
+
+                                                                
+                                                                </div>
+                                                                <%}%>
+                                                
+
+
+
+                                                
+   
+
