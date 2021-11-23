@@ -1,0 +1,19 @@
+[{
+    "utilizator": "elev",
+    "parola": "elev",
+    "tip": "user",
+    "nume": "elev",
+    "prenume": "elev",
+    "email": "elev@yahoo.com",
+    "telefon": ""
+},
+{
+    "utilizator": "profesor",
+    "parola": "profesor",
+    "tip": "admin",
+    "nume": "Codreanu",
+    "prenume": "Cristina",
+    "email": "codreanucristina330@yahoo.com",
+    "telefon": "0754321234"
+}
+]
