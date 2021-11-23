@@ -1,0 +1,39 @@
+[
+    { 
+        "id": 1,
+        "url":"imagini/team/team-member1.jpg",
+        "name":"Andrei Moisa",
+        "prof":"Director"
+    },
+    { 
+        "id": 2,
+        "url":"imagini/team/team-member2.jpg",
+        "name":"Adrian Dascălu",
+        "prof":"Profesor Matematica"
+    },
+    { 
+        "id": 3,
+        "url":"imagini/team/team-member3.jpg",
+        "name":"Cipriana Radu",
+        "prof":"Profesor Limba Romana"
+    },
+    { 
+        "id": 4,
+        "url":"imagini/team/team-member4.jpg",
+        "name":"Irina Lupu",
+        "prof":"Profesor Chimie "
+    },
+    { 
+        "id": 5,
+        "url":"imagini/team/team-member5.jpg",
+        "name":"Marius Lupu",
+        "prof":"Profesor Fizica"
+        
+    },
+    { 
+        "id": 6,
+        "url":"imagini/team/team-member6.jpg",
+        "name":"Tudor Bogdan",
+        "prof":"Profesor Biologie"
+    }
+]
